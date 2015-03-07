@@ -33,6 +33,16 @@ RUN cd /tmp && \
   make && \
   make install
 
+RUN cd /tmp && \
+  apt-get install -y libhiredis-dev && \
+  git clone https://github.com/carlosabalde/libvmod-redis.git && \
+  cd libvmod-redis && \
+  git checkout 4.0 && \
+  ./autogen.sh && \
+  ./configure VARNISHSRC=/usr/include/varnish && \
+  make && \
+  make install
+
 ENV VARNISH_VCL    /etc/varnish/default.vcl
 ENV VARNISH_CACHE  200m
 
