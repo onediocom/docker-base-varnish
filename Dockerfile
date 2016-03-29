@@ -9,7 +9,7 @@ RUN apt-get update -y && \
 RUN cd /tmp && \
   git clone https://github.com/varnish/libvmod-vsthrottle.git && \
   cd libvmod-vsthrottle && \
-  git checkout master && \
+  git checkout 4.0 && \
   ./autogen.sh && \
   ./configure VARNISHSRC=/usr/include/varnish && \
   make && \
