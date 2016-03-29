@@ -18,7 +18,7 @@ RUN cd /tmp && \
 RUN cd /tmp && \
   git clone https://github.com/varnish/libvmod-digest.git && \
   cd libvmod-digest && \
-  git checkout master && \
+  git checkout 4.0 && \
   ./autogen.sh && \
   ./configure VARNISHSRC=/usr/include/varnish && \
   make && \
@@ -27,7 +27,7 @@ RUN cd /tmp && \
 RUN cd /tmp && \
   git clone https://github.com/varnish/libvmod-header.git && \
   cd libvmod-header && \
-  git checkout master && \
+  git checkout 4.0 && \
   ./autogen.sh && \
   ./configure VARNISHSRC=/usr/include/varnish && \
   make && \
